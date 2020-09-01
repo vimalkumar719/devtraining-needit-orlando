@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_transform_map">
+    <sys_transform_map action="DELETE">
+        <active>true</active>
+        <copy_empty_fields>false</copy_empty_fields>
+        <create_new_record_on_empty_coalesce_fields>false</create_new_record_on_empty_coalesce_fields>
+        <enforce_mandatory_fields>Only Mapped Fields</enforce_mandatory_fields>
+        <name>Import Historic NeedI Data</name>
+        <order>100</order>
+        <run_business_rules>false</run_business_rules>
+        <run_script>true</run_script>
+        <script><![CDATA[(function transformRow(source, target, map, log, isUpdate) {
+	 if(!("u_requested_for_email" in source)){
+	  var name = source.u_requested_for.toLowerCase();
+	  target.u_requested_for_email = name.replace(" ", ".") + "@example.com";
+  }
+})(source, target, map, log, action==="update");]]></script>
+        <source_table>x_58872_needit_historic_needit_data</source_table>
+        <sys_class_name>sys_transform_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-01 08:36:07</sys_created_on>
+        <sys_id>61bb35e82fc39410a1ea136a2799b6f1</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>Import Historic NeedI Data</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_update_name>sys_transform_map_61bb35e82fc39410a1ea136a2799b6f1</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-01 09:47:08</sys_updated_on>
+        <target_table>x_58872_needit_needit</target_table>
+    </sys_transform_map>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</application>
+        <file_path/>
+        <instance_id>33f66d04db7a9780b2e05d00cf961959</instance_id>
+        <instance_name>dev61380</instance_name>
+        <name>sys_transform_map_61bb35e82fc39410a1ea136a2799b6f1</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_transform_map"&gt;&lt;sys_transform_map action="INSERT_OR_UPDATE"&gt;&lt;active&gt;true&lt;/active&gt;&lt;copy_empty_fields&gt;false&lt;/copy_empty_fields&gt;&lt;create_new_record_on_empty_coalesce_fields&gt;false&lt;/create_new_record_on_empty_coalesce_fields&gt;&lt;enforce_mandatory_fields&gt;Only Mapped Fields&lt;/enforce_mandatory_fields&gt;&lt;name&gt;Import Historic NeedI Data&lt;/name&gt;&lt;order&gt;100&lt;/order&gt;&lt;run_business_rules&gt;false&lt;/run_business_rules&gt;&lt;run_script&gt;true&lt;/run_script&gt;&lt;script&gt;&lt;![CDATA[(function transformRow(source, target, map, log, isUpdate) {
+	 if(!("u_requested_for_email" in source)){
+	  var name = source.u_requested_for.toLowerCase();
+	  target.u_requested_for_email = name.replace(" ", ".") + "@example.com";
+  }
+})(source, target, map, log, action==="update");]]&gt;&lt;/script&gt;&lt;source_table&gt;x_58872_needit_historic_needit_data&lt;/source_table&gt;&lt;sys_class_name&gt;sys_transform_map&lt;/sys_class_name&gt;&lt;sys_created_by&gt;admin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2020-09-01 08:36:07&lt;/sys_created_on&gt;&lt;sys_id&gt;61bb35e82fc39410a1ea136a2799b6f1&lt;/sys_id&gt;&lt;sys_mod_count&gt;7&lt;/sys_mod_count&gt;&lt;sys_name&gt;Import Historic NeedI Data&lt;/sys_name&gt;&lt;sys_package display_value="NeedIt" source="x_58872_needit"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="NeedIt"&gt;6ead8e780f603200cd674f8ce1050ed1&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_transform_map_61bb35e82fc39410a1ea136a2799b6f1&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;admin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2020-09-01 09:47:08&lt;/sys_updated_on&gt;&lt;target_table&gt;x_58872_needit_needit&lt;/target_table&gt;&lt;/sys_transform_map&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>899264158</payload_hash>
+        <record_name>Import Historic NeedI Data</record_name>
+        <reverted_from/>
+        <source>ab5c15a42f839410a1ea136a2799b60c</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-01 09:47:08</sys_created_on>
+        <sys_id>ff1c06a42f079410a1ea136a2799b61c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>174491022360000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-01 09:47:08</sys_updated_on>
+        <type>Table Transform Map</type>
+        <update_guid>3b1c06a4bf079410b00e07865c1c2b1c</update_guid>
+        <update_guid_history>3b1c06a4bf079410b00e07865c1c2b1c:899264158,91eac6649d079410ae8756f9357669d1:610585320,d89602a0a507941069d87a9d9b82420b:-723394761,d3b586600b0794106f570b87f72308e3:759924612,53054660de0794109c416e92e795ea5b:-1383685201,c7fff12c34c39410bac7569108a812f7:122734383,9e2df12c05c39410edf2934e70fc97d4:1076868918,e7dbb5e85dc39410f79c9fbc9d3bce8f:1201561533</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-09-01 09:53:03</sys_created_on>
+        <sys_db_object display_value="" name="sys_transform_map">sys_transform_map</sys_db_object>
+        <sys_id>1fcf8563168d41768525f115914c38a9</sys_id>
+        <sys_metadata>61bb35e82fc39410a1ea136a2799b6f1</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Import Historic NeedI Data</sys_name>
+        <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
+        <sys_scope_delete display_value="">94872a8897db403e8ee69a431de2fca4</sys_scope_delete>
+        <sys_update_name>sys_transform_map_61bb35e82fc39410a1ea136a2799b6f1</sys_update_name>
+        <sys_update_version display_value="sys_transform_map_61bb35e82fc39410a1ea136a2799b6f1">ff1c06a42f079410a1ea136a2799b61c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2020-09-01 09:53:03</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
